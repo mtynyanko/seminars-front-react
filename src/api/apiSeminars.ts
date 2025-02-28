@@ -11,6 +11,5 @@ export const deleteSeminar = (id: number): Promise<AxiosResponse> => {
 }
 
 export const updateSeminar = (id: number, seminar: ISeminar): Promise<AxiosResponse> => {
-  console.log(seminar)
   return api.patch(`seminars/${id}`, seminar);
 }

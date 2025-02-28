@@ -40,10 +40,8 @@ const SeminarsContainer = () => {
   const handleUpdate = (updatedSeminar: ISeminar) => {
     updateSeminar(Number(modifySeminar?.id), updatedSeminar)
       .then(response => {
-        console.log(response.data)
         setSeminarsArray(seminarsArray.map(item => (item.id === modifySeminar?.id ? response.data : item))
         );
-        console.log(seminarsArray)
         setOpenState(false);
       })
       .catch(error => console.error("Ошибка обновления:", error));

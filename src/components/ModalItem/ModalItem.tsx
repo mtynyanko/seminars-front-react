@@ -36,7 +36,7 @@ const ModalItem = ({
         <p className="info">название</p>
         <input type="text" className="title input-field" {...register('title')}/>
         <p className="info">описание</p>
-        <input type="text" className="description input-field" {...register('description')}/>
+        <textarea className="description input-field" {...register('description')}/>
         <p className="info">дата</p>
         <input type="text" className="date input-field" {...register('date')}/>
         <p className="info">время</p>

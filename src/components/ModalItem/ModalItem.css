@@ -11,3 +11,33 @@
   align-items: flex-start;
   animation: back .5s linear;
 }
+.light {
+  background: #545454;
+  font-size: 0.9em;
+}
+.info {
+  align-self: flex-start;
+  margin-bottom: 0px;
+  margin-left: 15px;
+}
+.input-field {
+  height: 40px;
+  border: 2px solid #a7a7a7;
+  border-radius: 15px;
+}
+.description.input-field {
+  margin-top: 0px;
+  height: 100px;
+  font-size: 1.2em;
+  resize: none;
+}
+.footer {
+  height: 40px;
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+  justify-content: end;
+}
+.time.input-field {
+  font-weight: 100;
+}
