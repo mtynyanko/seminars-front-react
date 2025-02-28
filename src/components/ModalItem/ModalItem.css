@@ -1,0 +1,13 @@
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background: hsla(0, 0%, 0%, 0.184);
+  backdrop-filter: blur(3px);
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  animation: back .5s linear;
+}

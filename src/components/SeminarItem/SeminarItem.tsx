@@ -1,11 +1,14 @@
 import { useState } from "react";
+import EditNoteIcon from '@mui/icons-material/EditNote';
+import DeleteIcon from '@mui/icons-material/Delete';
+import "./SeminarItem.css"
+import { ISeminar } from "../../types";
 
-interface ItemProps {
-  title: string;
-  description: string;
-  photo: string;
-  date: string;
-  time: string;
+
+
+export interface ItemProps extends Omit<ISeminar, "id">{
+  onDelete: () => void;
+  onEdit: () => void;
 }
 
 const SeminarItem = ({
@@ -14,7 +17,10 @@ const SeminarItem = ({
   photo,
   date,
   time,
+  onDelete,
+  onEdit,
 }: ItemProps) => {
+
   const [imgSrc, setImgSrc] = useState(photo);
 
   const missingPicture = () => {
@@ -24,14 +30,25 @@ const SeminarItem = ({
   return (
   <div className="card">
     <h3 className="title">{title}</h3>
-    <div className="description">{description}</div>
     <img 
       src={imgSrc}
       className="photo"
       onError={missingPicture}
     />
-    <p className="date">{date}</p>
-    <p className="time">{time}</p>
+    <div className="description">{description}</div>
+    <div className="footer-area">
+      <div className="event-date">
+        <p className="date">{date}</p>
+        <p className="time">{time}</p>
+      </div>
+      <button className="edit button" onClick={onEdit}>
+        <EditNoteIcon />
+      </button>
+      <button className="delete button" onClick={onDelete}>
+        <DeleteIcon />
+      </button>
+    </div>
+    
   </div>
   );
 }

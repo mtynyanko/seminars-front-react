@@ -7,9 +7,10 @@ export const getSeminars = (): Promise<AxiosResponse<ISeminar[]>> => {
 }
 
 export const deleteSeminar = (id: number): Promise<AxiosResponse> => {
-  return api.delete("seminars", { params: id });
+  return api.delete(`seminars/${id}`);
 }
 
 export const updateSeminar = (id: number, seminar: ISeminar): Promise<AxiosResponse> => {
+  console.log(seminar)
   return api.patch(`seminars/${id}`, seminar);
 }

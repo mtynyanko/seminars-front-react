@@ -1,0 +1,50 @@
+.card {
+  background-color: #404040;
+  width: 400px;
+  height: 500px;
+  padding: 15px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+.title {
+  margin-top: 0px;
+}
+.footer-area {
+  margin-top: auto;
+  display: flex;
+  align-items: end;
+  gap: 8px;
+}
+
+.event-date {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  font-size: 1.1em;
+}
+.time {
+  font-weight: bold;
+}
+.button {
+  margin-bottom: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  border: 2px solid #cfcfcf;
+  transition: all 400ms ease;
+}
+.edit {
+  margin-left: auto;
+}
+.description {
+  margin-top: 10px;
+  font-size: 0.95em;
+
+}
+.photo {
+  border-radius: 15px;
+}
